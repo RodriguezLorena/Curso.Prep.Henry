@@ -168,13 +168,13 @@ function esPrimo(numero) {
 
   }
  
-  for(let i = numero; i <= 1; i++){
-    if(numero % i === 0){
-      return true
+  for(let i = numero; i > 1; i--){
+    if(numero % i === 0 && numero !== i){
+      return false
     }
    
   }
-  return false
+  return true
 }
 
 function esVerdadero(valor){
