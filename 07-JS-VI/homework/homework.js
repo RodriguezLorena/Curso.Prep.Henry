@@ -17,6 +17,7 @@ function invocarCallback(cb) {
   // Invoca al callback `cb`
   //Tu código:
   cb()
+  
  
 }
 
@@ -35,10 +36,7 @@ function sumarArray(numeros, cb) {
   let suma=  numeros.reduce(function(acumulador, elemento){
       return acumulador + elemento
    }, 0)
-   cb(suma)
-
-
-   
+   cb(suma)  
  
 }
 
@@ -54,12 +52,9 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
- let nuevo=array.map(function(elemento){
-   return elemento * elemento 
- })
- return nuevo
-  
 
+   return array.map(cb)
+   
 }
 
 function filter(array) {
